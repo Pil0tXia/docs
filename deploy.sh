@@ -11,6 +11,9 @@ push_branch=gh-pages # 推送的分支
 # 生成静态文件
 npm run build
 
+# 生成GithubPages的自定义域名文件
+echo 'docs.pil0txia.com' > docs/.vuepress/dist/CNAME
+
 # 进入生成的文件夹
 cd $dist_path
 

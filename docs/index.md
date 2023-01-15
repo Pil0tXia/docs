@@ -3,7 +3,7 @@ home: true
 heroImage: https://static.pil0txia.com/assets/03_3_600p.webp
 heroText: Pil0tXia 的书房
 tagline: 我的学习笔记和技术分享
-actionText: 开始阅读 🠖
+actionText: 开始阅读 →
 actionLink: /pages/d1af54/
 bannerBg: none # auto => 网格纹背景(有bodyBgImg时无背景)，默认 | none => 无 | '大图地址' | background: 自定义背景样式       提示：如发现文本颜色不适应你的背景时可以到palette.styl修改$bannerTextColor变量
 

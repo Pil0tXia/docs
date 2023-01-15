@@ -1,5 +1,5 @@
-//const baiduCode = require('./config/baiduCode.js'); // 百度统计hm码
-//const htmlModules = require('./config/htmlModules.js');
+// const baiduCode = require('./config/baiduCode.js'); // 百度统计hm码
+// const htmlModules = require('./config/htmlModules.js');
 
 
 module.exports = {
@@ -14,6 +14,7 @@ module.exports = {
     ['link', { rel: 'icon', href: 'https://static.pil0txia.com/assets/favicon.ico' }], //favicons，资源放在public文件夹
     ['meta', { name: 'keywords', content: 'pil0txia,it,docs,note,study' }],
     ['meta', { name: 'theme-color', content: '#3eaf7c' }], // 移动浏览器主题颜色
+    ['meta', { name: 'baidu-site-verification', content: 'code-f37Lv9IIFX' }], // 百度索引验证
   ],
 
   // 主题配置
@@ -92,9 +93,9 @@ module.exports = {
     },
     footer: { // 页脚信息
       createYear: 2022, // 博客创建年份
-      copyrightInfo: 'Pil0tXia | CC BY-NC-SA 4.0 Licensed | <a href="https://beian.miit.gov.cn/">苏ICP备1921X996号-2</a>', // 博客版权信息，支持a标签
+      copyrightInfo: 'Pil0tXia | CC BY-NC-SA 4.0 Licensed | <a href="https://beian.miit.gov.cn/" target="_blank">苏ICP备2023001491号-1</a>', // 博客版权信息，支持a标签
     },
-    //htmlModules,
+    // htmlModules,
   },
 
   // 插件
@@ -124,12 +125,12 @@ module.exports = {
     //   ]
     // }],
 
-    //[
-    //  'vuepress-plugin-baidu-tongji', // 百度统计
-    //  {
-    //    hm: baiduCode || '01293bffa6c3962016c08ba685c79d78'
-    //  }
-    //],
+    // [
+    //   'vuepress-plugin-baidu-tongji', // 百度统计
+    //   {
+    //     hm: baiduCode || '01293bffa6c3962016c08ba685c79d78'
+    //   }
+    // ],
 
     ['one-click-copy', { // 代码块复制按钮
       copySelector: ['div[class*="language-"] pre', 'div[class*="aside-code"] aside'], // String or Array
@@ -164,6 +165,22 @@ module.exports = {
           const dayjs = require('dayjs') // https://day.js.org/
           return dayjs(timestamp).format('YYYY/MM/DD, HH:mm:ss')
         },
+      }
+    ],
+    [
+      'sitemap', 
+      {
+        hostname: 'https://docs.pil0txia.com',
+        exclude: ["/404.html"]
+      }
+    ],
+    [
+      'md-enhance', 
+      {
+        sup: true, // 上角标
+        sub: true, // 下角标
+        footnote: true, // 脚注
+        tasklist: true, // 任务列表
       }
     ]
   ],
