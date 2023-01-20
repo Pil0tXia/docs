@@ -182,7 +182,8 @@ module.exports = {
         footnote: true, // 脚注
         tasklist: true, // 任务列表
       }
-    ]
+    ],
+    ['pangu']
   ],
 
   markdown: {
