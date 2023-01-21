@@ -129,14 +129,14 @@ module.exports = {
     [
       'vuepress-plugin-baidu-tongji', // 百度统计
       {
-        hm: baiduCode || '033cea028d1903fd4a1c0f93cb0639c4'
+        hm: baiduCode || 'e0873ee59c9d5497473cce1b6db2e1a6'
       }
     ],
 
     [
-      '@vuepress/google-analytics', // 百度统计
+      '@vuepress/google-analytics', // 谷歌分析
       {
-        ga: 'G-PXENV1F7F1'
+        ga: 'G-57XMHPB9DW'
       }
     ],
 
