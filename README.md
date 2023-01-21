@@ -20,3 +20,17 @@ https://stackoverflow.com/questions/69692842/error-message-error0308010cdigital-
 export NODE_OPTIONS=--openssl-legacy-provider
 ```
 
+## 2023-1-22 npm转yarn
+
+原因：[Google Analytics 插件 | VuePress](https://vuepress.vuejs.org/zh/plugin/official/plugin-google-analytics.html)
+
+迁移文档：[Migrating from npm | Yarn](https://classic.yarnpkg.com/lang/en/docs/migrating-from-npm/)
+
+此仓库：
+
+```
+yarn install
+yarn add [package] --dev
+yarn dev
+```
+

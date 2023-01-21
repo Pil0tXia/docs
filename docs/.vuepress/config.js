@@ -1,4 +1,4 @@
-// const baiduCode = require('./config/baiduCode.js'); // 百度统计hm码
+const baiduCode = require('./config/baiduCode.js'); // 百度统计hm码
 // const htmlModules = require('./config/htmlModules.js');
 
 
@@ -15,6 +15,7 @@ module.exports = {
     ['meta', { name: 'keywords', content: 'pil0txia,it,docs,note,study' }],
     ['meta', { name: 'theme-color', content: '#3eaf7c' }], // 移动浏览器主题颜色
     ['meta', { name: 'baidu-site-verification', content: 'code-f37Lv9IIFX' }], // 百度索引验证
+    ['script', { name: 'baidu-site-verification', content: 'code-f37Lv9IIFX' }],
   ],
 
   // 主题配置
@@ -125,12 +126,19 @@ module.exports = {
     //   ]
     // }],
 
-    // [
-    //   'vuepress-plugin-baidu-tongji', // 百度统计
-    //   {
-    //     hm: baiduCode || '01293bffa6c3962016c08ba685c79d78'
-    //   }
-    // ],
+    [
+      'vuepress-plugin-baidu-tongji', // 百度统计
+      {
+        hm: baiduCode || '033cea028d1903fd4a1c0f93cb0639c4'
+      }
+    ],
+
+    [
+      '@vuepress/google-analytics', // 百度统计
+      {
+        ga: 'G-PXENV1F7F1'
+      }
+    ],
 
     ['one-click-copy', { // 代码块复制按钮
       copySelector: ['div[class*="language-"] pre', 'div[class*="aside-code"] aside'], // String or Array
