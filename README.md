@@ -34,3 +34,17 @@ yarn add [package] --dev
 yarn dev
 ```
 
+## 2023-2-10 页面标题SEO优化
+
+[提问: 如何将笔记名称或章节名称添加进title以利于更好的SEO · Issue #666 · xugaoyi/vuepress-theme-vdoing](https://github.com/xugaoyi/vuepress-theme-vdoing/issues/666)
+
+`docs\node_modules\@vuepress\core\lib\node\ClientComputedMixin.js`
+
+```
+return siteTitle
+        ? selfTitle
+          ? (selfTitle + ' - ' + siteTitle)
+          : siteTitle
+        : selfTitle || 'VuePress'
+```
+

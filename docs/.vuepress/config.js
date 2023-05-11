@@ -13,9 +13,23 @@ module.exports = {
   head: [ // 注入到页面<head> 中的标签，格式[tagName, { attrName: attrValue }, innerHTML?]
     ['link', { rel: 'icon', href: 'https://static.pil0txia.com/assets/favicon.ico' }], //favicons，资源放在public文件夹
     ['meta', { name: 'keywords', content: 'pil0txia,it,docs,note,study' }],
-    ['meta', { name: 'theme-color', content: '#3eaf7c' }], // 移动浏览器主题颜色
+    // ['meta', { name: 'theme-color', content: '#3eaf7c' }], // 移动浏览器主题颜色
     ['meta', { name: 'baidu-site-verification', content: 'code-f37Lv9IIFX' }], // 百度索引验证
-    ['script', { name: 'baidu-site-verification', content: 'code-f37Lv9IIFX' }],
+    // 谷歌分析
+    [
+      'script',
+      {
+        async: true,
+        src: 'https://www.googletagmanager.com/gtag/js?id=G-57XMHPB9DW',
+      },
+    ],
+    [
+      'script',
+      {},
+      [
+        "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config', 'G-57XMHPB9DW');",
+      ],
+    ],
   ],
 
   // 主题配置
@@ -70,15 +84,15 @@ module.exports = {
 
     author: { // 文章默认的作者信息，可在md文件中单独配置此信息 String | {name: String, href: String}
       name: 'Pil0tXia', // 必需
-      href: 'https://github.com/Pil0tXia' // 可选的
+      href: 'https://www.pil0txia.com' // 可选的
     },
     social: { // 社交图标，显示于博主信息栏和页脚栏
       // iconfontCssFile: '//at.alicdn.com/t/font_1678482_u4nrnp8xp6g.css', // 可选，阿里图标库在线css文件地址，对于主题没有的图标可自由添加
       icons: [
         {
-          iconClass: 'icon-youjian',
-          title: 'Contact Me',
-          link: 'mailto:admin@pil0txia.com'
+          iconClass: 'icon-shuben',
+          title: 'Blog',
+          link: 'https://www.pil0txia.com'
         },
         {
           iconClass: 'icon-github',
@@ -86,9 +100,9 @@ module.exports = {
           link: 'https://github.com/Pil0tXia'
         },
         {
-          iconClass: 'icon-bilibili',
-          title: 'Bilibili',
-          link: 'https://space.bilibili.com/286768851/'
+          iconClass: 'icon-youjian',
+          title: 'Contact Me',
+          link: 'mailto:admin@pil0txia.com'
         }
       ]
     },
@@ -130,13 +144,6 @@ module.exports = {
       'vuepress-plugin-baidu-tongji', // 百度统计
       {
         hm: baiduCode || 'e0873ee59c9d5497473cce1b6db2e1a6'
-      }
-    ],
-
-    [
-      '@vuepress/google-analytics', // 谷歌分析
-      {
-        ga: 'G-57XMHPB9DW'
       }
     ],
 
